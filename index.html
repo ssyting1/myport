@@ -3003,11 +3003,18 @@
                 <div class="footer-left">
                     <h3>Let's Connect</h3>
                     <p>Interested in discussing logistics technology, AI automation, or product strategy? Reach out and let's build something great together.</p>
-                    <form class="footer-form" id="contactForm">
-                        <input type="email" id="contactEmail" placeholder="Your email address" required>
-                        <textarea id="contactMessage" placeholder="Your message" required></textarea>
+                    <form class="footer-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+                        <input type="email" name="email" id="contactEmail" placeholder="Your email address" required>
+                        <textarea name="message" id="contactMessage" placeholder="Your message" required></textarea>
                         <button type="submit" class="send-btn">Send Message</button>
                     </form>
+                    <div id="formSuccess" style="display: none; margin-top: 20px; padding: 16px; background: #10b981; color: white; border-radius: 4px; text-align: center;">
+                        <strong>Thank you!</strong> Your message has been sent. I'll get back to you soon.
+                    </div>
                 </div>
                 <div class="footer-right">
                     <h4>Connect</h4>
@@ -3397,20 +3404,29 @@
             }
         });
 
-        // Contact form
+        // Contact form - Netlify Forms handles submission automatically
         document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('contactEmail').value;
-            const message = document.getElementById('contactMessage').value;
+            const btn = e.target.querySelector('.send-btn');
+            const form = e.target;
+            const successMsg = document.getElementById('formSuccess');
             
-            // Create mailto link
-            const mailtoLink = `mailto:simon.ting@example.com?subject=Portfolio Contact from ${email}&body=${encodeURIComponent(message)}`;
-            window.location.href = mailtoLink;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
             
-            // Reset form
-            document.getElementById('contactForm').reset();
-            alert('Thank you for your message! Your email client should open with a pre-filled message.');
+            // For Netlify, let the form submit normally
+            // The success message will show briefly before page redirect
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+            }, 500);
         });
+        
+        // Check if returning from successful submission
+        if (window.location.search.includes('success=true') || window.location.pathname.includes('success')) {
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        }
 
         // AI Evaluation Agent
         const useCaseData = {

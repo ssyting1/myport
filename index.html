@@ -2266,23 +2266,106 @@
                         <label>Origin Country</label>
                         <select id="originCountry">
                             <option value="">Select country</option>
-                            <option value="CN">China</option>
-                            <option value="MX">Mexico</option>
-                            <option value="CA">Canada</option>
-                            <option value="EU">European Union</option>
-                            <option value="JP">Japan</option>
-                            <option value="GB">United Kingdom</option>
-                            <option value="IN">India</option>
-                            <option value="VN">Vietnam</option>
-                            <option value="KR">South Korea</option>
-                            <option value="AU">Australia</option>
-                            <option value="OTHER">Other</option>
+                            <optgroup label="North America">
+                                <option value="CA">Canada</option>
+                                <option value="US">United States</option>
+                                <option value="MX">Mexico</option>
+                            </optgroup>
+                            <optgroup label="Asia">
+                                <option value="CN">China</option>
+                                <option value="JP">Japan</option>
+                                <option value="KR">South Korea</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="IN">India</option>
+                                <option value="TH">Thailand</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="PH">Philippines</option>
+                                <option value="SG">Singapore</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="PK">Pakistan</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="IT">Italy</option>
+                                <option value="ES">Spain</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="BE">Belgium</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="PL">Poland</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="AT">Austria</option>
+                                <option value="DK">Denmark</option>
+                                <option value="NO">Norway</option>
+                                <option value="FI">Finland</option>
+                                <option value="IE">Ireland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="HU">Hungary</option>
+                                <option value="RO">Romania</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="HR">Croatia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LV">Latvia</option>
+                                <option value="EE">Estonia</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MT">Malta</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="GR">Greece</option>
+                            </optgroup>
+                            <optgroup label="South America">
+                                <option value="BR">Brazil</option>
+                                <option value="AR">Argentina</option>
+                                <option value="CL">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="PE">Peru</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="VE">Venezuela</option>
+                            </optgroup>
+                            <optgroup label="Oceania">
+                                <option value="AU">Australia</option>
+                                <option value="NZ">New Zealand</option>
+                            </optgroup>
+                            <optgroup label="Middle East & Africa">
+                                <option value="IL">Israel</option>
+                                <option value="TR">Turkey</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="EG">Egypt</option>
+                                <option value="MA">Morocco</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="KE">Kenya</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="RU">Russia</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="OTHER">Other Countries</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Destination Country</label>
                         <select id="destinationCountry">
                             <option value="US" selected>United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="MX">Mexico</option>
+                            <option value="CN">China</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="JP">Japan</option>
+                            <option value="AU">Australia</option>
+                            <option value="OTHER">Other</option>
                         </select>
                     </div>
                 </div>
@@ -2313,7 +2396,7 @@
                             <div class="value" id="totalCost">$0.00</div>
                         </div>
                     </div>
-                    <p class="result-note" id="resultNote">* Estimates based on current US tariff rates (2025-2026). Actual duties may vary.</p>
+                    <p class="result-note" id="resultNote">* Estimates based on current worldwide tariff rates (2025-2026). Supports imports to US, Canada, Mexico, EU, UK, Japan, Australia, China and more. Actual duties may vary by specific product classification.</p>
                 </div>
             </div>
             
@@ -2706,6 +2789,111 @@
                 note: 'Other countries: 10% reciprocal tariff'
             }
         };
+        
+        // Destination country tariff rules (for worldwide support)
+        const destinationRules = {
+            'US': {
+                name: 'United States',
+                getTariffs: (origin) => {
+                    const data = countryTariffs[origin] || countryTariffs['OTHER'];
+                    let rate = data.reciprocal || 10;
+                    let note = data.note || 'Standard 10% reciprocal tariff';
+                    
+                    // China special rates
+                    if (origin === 'CN') {
+                        rate += 20 + 10; // Section 301 + Fentanyl
+                        note = 'China: 20% base + 20% Section 301 + 10% Fentanyl = 50% total';
+                    }
+                    
+                    return { rate, note };
+                }
+            },
+            'CA': {
+                name: 'Canada',
+                getTariffs: (origin) => {
+                    // Canada tariff rules
+                    if (origin === 'US' || origin === 'MX') {
+                        return { rate: 0, note: 'USMCA: Duty-free for qualifying goods' };
+                    }
+                    if (origin === 'CN') {
+                        return { rate: 35, note: 'China: 35% tariff (including surtaxes)' };
+                    }
+                    // Most Favoured Nation (MFN) rates vary by product
+                    return { rate: 5, note: 'MFN rate: ~5% average (varies by HS code)' };
+                }
+            },
+            'MX': {
+                name: 'Mexico',
+                getTariffs: (origin) => {
+                    // Mexico tariff rules
+                    if (origin === 'US' || origin === 'CA') {
+                        return { rate: 0, note: 'USMCA: Duty-free for qualifying goods' };
+                    }
+                    if (origin === 'CN') {
+                        return { rate: 25, note: 'China: 25% tariff' };
+                    }
+                    return { rate: 10, note: 'Standard IGI rate: ~10% (varies by product)' };
+                }
+            },
+            'CN': {
+                name: 'China',
+                getTariffs: (origin) => {
+                    // China retaliatory tariffs
+                    if (origin === 'US') {
+                        return { rate: 25, note: 'US goods: 25% retaliatory tariff' };
+                    }
+                    return { rate: 6.5, note: 'MFN rate: ~6.5% average' };
+                }
+            },
+            'GB': {
+                name: 'United Kingdom',
+                getTariffs: (origin) => {
+                    if (origin === 'US') {
+                        return { rate: 4, note: 'UK Global Tariff: ~4% average' };
+                    }
+                    return { rate: 4, note: 'UK Global Tariff applies' };
+                }
+            },
+            'DE': {
+                name: 'Germany (EU)',
+                getTariffs: (origin) => {
+                    if (origin === 'US') {
+                        return { rate: 4, note: 'EU MFN rate: ~4% average' };
+                    }
+                    return { rate: 4, note: 'EU Common External Tariff applies' };
+                }
+            },
+            'FR': {
+                name: 'France (EU)',
+                getTariffs: (origin) => {
+                    return { rate: 4, note: 'EU Common External Tariff: ~4% average' };
+                }
+            },
+            'JP': {
+                name: 'Japan',
+                getTariffs: (origin) => {
+                    if (origin === 'US') {
+                        return { rate: 3.5, note: 'Japan-US Trade Agreement rate' };
+                    }
+                    return { rate: 4.5, note: 'Japan MFN rate: ~4.5% average' };
+                }
+            },
+            'AU': {
+                name: 'Australia',
+                getTariffs: (origin) => {
+                    if (origin === 'US') {
+                        return { rate: 0, note: 'AUSFTA: Duty-free for most goods' };
+                    }
+                    return { rate: 5, note: 'Australian MFN rate applies' };
+                }
+            },
+            'OTHER': {
+                name: 'Other',
+                getTariffs: (origin) => {
+                    return { rate: 8, note: 'Estimated average tariff rate' };
+                }
+            }
+        };
 
         // DOM Elements
         const hsCodeInput = document.getElementById('hsCode');
@@ -2777,6 +2965,7 @@
             const hsCode = hsCodeInput.value.trim();
             const productValue = parseFloat(productValueInput.value);
             const originCountry = originCountrySelect.value;
+            const destinationCountry = document.getElementById('destinationCountry').value;
 
             if (!hsCode || !productValue || !originCountry) {
                 alert('Please fill in all fields');
@@ -2790,39 +2979,42 @@
                 return;
             }
 
-            // Calculate base duty
+            // Get destination rules
+            const destRule = destinationRules[destinationCountry] || destinationRules['OTHER'];
+            const tariffInfo = destRule.getTariffs(originCountry);
+            
+            // Calculate base duty (HS code specific rate)
             const baseDuty = (productValue * hsData.baseRate) / 100;
-
-            // Calculate additional tariffs
-            let additionalTariffRate = 0;
-            let tariffNote = '';
-
-            if (countryTariffs[originCountry]) {
-                const countryData = countryTariffs[originCountry];
-                if (countryData.usmca) {
-                    // USMCA countries may have reduced rates
-                    additionalTariffRate = 0;
-                    tariffNote = countryData.note;
-                } else {
-                    additionalTariffRate = countryData.reciprocal;
-                    if (originCountry === 'CN') {
-                        additionalTariffRate += countryData.fentanyl + countryData.section301;
-                    }
-                    tariffNote = countryData.note;
+            
+            // Calculate additional tariffs based on origin-destination pair
+            const additionalTariffRate = tariffInfo.rate;
+            const tariffNote = tariffInfo.note;
+            
+            // Apply category-specific adjustments
+            let categoryAdjustment = 0;
+            if (destinationCountry === 'US') {
+                // US-specific category adjustments
+                if (hsData.category === 'electronics' && (originCountry === 'CN' || originCountry === 'OTHER')) {
+                    categoryAdjustment = 7.5; // Section 301 for electronics
+                } else if (hsData.category === 'steel' || hsData.category === 'aluminum') {
+                    categoryAdjustment = 10; // Section 232
                 }
-            } else {
-                additionalTariffRate = 10; // Default reciprocal tariff
-                tariffNote = 'Standard 10% reciprocal tariff applies';
             }
 
-            const additionalTariffs = (productValue * additionalTariffRate) / 100;
+            // Calculate total additional tariffs
+            const totalAdditionalRate = additionalTariffRate + categoryAdjustment;
+            const additionalTariffs = (productValue * totalAdditionalRate) / 100;
             const totalCost = productValue + baseDuty + additionalTariffs;
+            
+            // Get country names for display
+            const originName = originCountrySelect.options[originCountrySelect.selectedIndex].text;
+            const destName = document.getElementById('destinationCountry').options[document.getElementById('destinationCountry').selectedIndex].text;
 
             // Display results
-            baseDutyEl.textContent = '$' + baseDuty.toFixed(2);
-            additionalTariffsEl.textContent = '$' + additionalTariffs.toFixed(2);
+            baseDutyEl.textContent = '$' + baseDuty.toFixed(2) + ' (' + hsData.baseRate + '%)';
+            additionalTariffsEl.textContent = '$' + additionalTariffs.toFixed(2) + ' (' + totalAdditionalRate + '%)';
             totalCostEl.textContent = '$' + totalCost.toFixed(2);
-            resultNote.textContent = '* ' + tariffNote + '. Estimates based on 2025-2026 US tariff rates.';
+            resultNote.textContent = '* ' + tariffNote + '. Importing from ' + originName + ' to ' + destName + '. Estimates based on 2025-2026 tariff rates. Actual duties may vary by specific product classification.';
 
             resultsSection.classList.add('active');
         });

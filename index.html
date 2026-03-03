@@ -587,6 +587,267 @@
             font-style: italic;
         }
         
+        /* Product Philosophy Section */
+        .philosophy-section {
+            background: var(--brand-linen);
+        }
+        
+        .philosophy-hero {
+            text-align: center;
+            padding: 20px 0 30px;
+        }
+        
+        .philosophy-tagline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+            color: var(--brand-text);
+        }
+        
+        .philosophy-hero .sub-line {
+            font-size: 15px;
+            color: var(--brand-dark-gray);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .philosophy-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            margin-bottom: 50px;
+            align-items: start;
+        }
+        
+        .philosophy-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .philosophy-intro {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--brand-text);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-column p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--brand-dark-gray);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-hierarchy {
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-hierarchy p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--brand-dark-gray);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-hierarchy p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .philosophy-hierarchy .highlight {
+            color: var(--brand-text);
+            font-weight: 500;
+        }
+        
+        .philosophy-hierarchy .highlight-ai {
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .philosophy-image-box {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            background: #0a0a0f;
+        }
+        
+        .philosophy-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .philosophy-box {
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-top: 4px;
+        }
+        
+        .philosophy-box-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--brand-text);
+            margin-bottom: 10px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--brand-dark-gray);
+            margin: 0;
+        }
+        
+        .philosophy-box ul {
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+        
+        .philosophy-box ul li {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--brand-dark-gray);
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        
+        .philosophy-box ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 5px;
+            height: 5px;
+            background: var(--brand-text);
+            border-radius: 50%;
+        }
+        
+        .philosophy-closing-line {
+            font-style: italic;
+            color: var(--brand-dark-gray);
+            margin-top: auto;
+            padding-top: 16px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .philosophy-cards {
+            margin-bottom: 45px;
+        }
+        
+        .philosophy-cards h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--brand-text);
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        
+        .philosophy-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        
+        .philosophy-card-img {
+            background: var(--brand-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .philosophy-card-img img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .philosophy-card-img:hover img {
+            filter: grayscale(0%);
+        }
+        
+        .philosophy-card-content {
+            padding: 20px;
+        }
+        
+        .philosophy-card-content h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .philosophy-card-content p {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+        }
+        
+        .philosophy-closing {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+        
+        .philosophy-closing p {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--brand-text);
+            letter-spacing: 0.01em;
+        }
+        
+        @media (max-width: 991px) {
+            .philosophy-body {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .philosophy-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .philosophy-cards h3 {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .philosophy-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .philosophy-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .philosophy-closing p {
+                font-size: 22px;
+            }
+            
+            .philosophy-tagline {
+                font-size: 28px;
+            }
+            
+            .philosophy-image-box {
+                height: 150px;
+            }
+        }
+        
         /* Side Projects Section */
         .side-projects {
             text-align: center;
@@ -1801,6 +2062,7 @@
             <a href="#" class="logo">Simon Ting</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -1919,6 +2181,100 @@
         </div>
     </section>
 
+    <!-- Product Philosophy Section -->
+    <section id="philosophy" class="philosophy-section">
+        <div class="container">
+            <h2 class="section-title">My Product Philosophy</h2>
+            
+            <div class="philosophy-hero">
+                <p class="philosophy-tagline">I don't build features. I improve decisions.</p>
+                <p class="sub-line">AI is powerful. The real work is deciding where it belongs.</p>
+            </div>
+            
+            <div class="philosophy-body">
+                <div class="philosophy-column">
+                    <div class="philosophy-image-box">
+                        <img src="philosophy-hero.jpg" alt="Decision Making Philosophy">
+                    </div>
+                    <p>I build products for real-world chaos. I started in logistics SaaS — which is a polite way of saying I worked in environments where something is always late, someone is always calling, and something is always on fire.</p>
+                    <p>My early job was simple: talk to customers, untangle ugly workflows, and ship things that make dispatchers breathe easier. Most of the value came down to three questions: Where is it? When will it get there? And why is this one different?</p>
+                    <p>Over time, that became helping systems learn from the mess.</p>
+                    <div class="philosophy-box">
+                        <p class="philosophy-box-title">I think about AI in practical terms:</p>
+                        <p>What decision are we improving?<br>
+                        What happens when the model is wrong?<br>
+                        Can the user understand and trust the output?</p>
+                    </div>
+                </div>
+                <div class="philosophy-column">
+                    <div class="philosophy-hierarchy">
+                        <p>If a simple rule solves it, <span class="highlight">use the rule.</span></p>
+                        <p>If the data is weak, <span class="highlight">fix the data.</span></p>
+                        <p>If the decision is high impact and patterns exist — <span class="highlight-ai">that's where AI belongs.</span></p>
+                    </div>
+                    <p>In operations-heavy environments, data, UX, and models are one system. If inputs are noisy, predictions get expensive. Bad ETAs become overtime. Overtime becomes churn.</p>
+                    <p>So I spend time in the less glamorous layers — data contracts, edge cases, failure modes. Because a polished AI feature built on shaky inputs is just a confident mistake.</p>
+                    <div class="philosophy-box">
+                        <p class="philosophy-box-title">When I design AI features, I focus on:</p>
+                        <ul>
+                            <li>Decision support before full automation</li>
+                            <li>Clear signals over black boxes</li>
+                            <li>Visible confidence levels</li>
+                            <li>Human override by default</li>
+                            <li>Measurable outcomes, not model accuracy theater</li>
+                        </ul>
+                    </div>
+                    <p class="philosophy-closing-line">The goal isn't to replace the operator. It's to give them leverage.</p>
+                </div>
+            </div>
+            
+            <div class="philosophy-cards">
+                <h3>What I Love Building</h3>
+                <div class="philosophy-cards-grid">
+                    <div class="philosophy-card-img">
+                        <img src="ai-copilots.jpg" alt="AI Copilots">
+                        <div class="philosophy-card-content">
+                            <h4>AI Copilots</h4>
+                            <p>Systems that assist operators without taking control away</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-card-img">
+                        <img src="intelligent-triage.jpg" alt="Intelligent Triage">
+                        <div class="philosophy-card-content">
+                            <h4>Intelligent Triage</h4>
+                            <p>Models that surface what matters and quiet the noise</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-card-img">
+                        <img src="prediction-workflow.jpg" alt="Prediction + Workflow">
+                        <div class="philosophy-card-content">
+                            <h4>Prediction + Workflow</h4>
+                            <p>Not just insight, but action built directly into the flow</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-card-img">
+                        <img src="learning-systems.jpg" alt="Learning Systems">
+                        <div class="philosophy-card-content">
+                            <h4>Learning Systems</h4>
+                            <p>Products that get better from user corrections over time</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-card-img">
+                        <img src="trust-first-ai.jpg" alt="Trust-First AI">
+                        <div class="philosophy-card-content">
+                            <h4>Trust-First AI</h4>
+                            <p>Features that earn adoption instead of forcing it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="philosophy-closing">
+                <p>Make the system smarter. Keep the human in charge.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
@@ -1966,35 +2322,35 @@
             <h2 class="section-title">Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <img src="skill-strategy.jpg" alt="Cross-Functional Leadership">
+                    <img src="skill-leadership.jpg" alt="Cross-Functional Leadership">
                     <div class="skill-card-content">
                         <h3>Cross-Functional Leadership</h3>
                         <p>Leading diverse teams across engineering, design, and business to deliver cohesive product solutions</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="hero-portrait.jpg" alt="Stakeholder Management">
+                    <img src="skill-stakeholder.jpg" alt="Stakeholder Management">
                     <div class="skill-card-content">
                         <h3>Stakeholder Management</h3>
                         <p>Executive communication, client relations, and building strategic partnerships</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="skill-agile.jpg" alt="Go-to-Market Strategy">
+                    <img src="skill-gtm.jpg" alt="Go-to-Market Strategy">
                     <div class="skill-card-content">
                         <h3>Go-to-Market Strategy</h3>
                         <p>Product launches, market positioning, and driving user adoption</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="skill-data.jpg" alt="User Research">
+                    <img src="skill-research.jpg" alt="User Research">
                     <div class="skill-card-content">
                         <h3>User Research</h3>
                         <p>Customer interviews, usability testing, and translating insights into product features</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="skill-ai.jpg" alt="Product Documentation">
+                    <img src="skill-docs.jpg" alt="Product Documentation">
                     <div class="skill-card-content">
                         <h3>Product Documentation</h3>
                         <p>User guides, feature specifications, release notes, and onboarding materials</p>

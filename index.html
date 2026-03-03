@@ -1,0 +1,3355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Ting | Senior Product Manager Portfolio</title>
+    <meta name="description" content="Senior Product Manager with 10+ years experience building B2B logistics SaaS platforms, AI automation, and digital transformation solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-linen: #f8f7f5;
+            --brand-text: #1f1f1f;
+            --brand-dark-gray: #4b5563;
+            --brand-light-gray: #9ca3af;
+            --brand-border: #e8e8e6;
+            --brand-white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--brand-linen);
+            color: var(--brand-text);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 20px 0;
+            background: var(--brand-linen);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--brand-text);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-dark-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--brand-text);
+        }
+        
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--brand-text);
+            color: var(--brand-linen);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .hero h1 span {
+            font-weight: 500;
+        }
+        
+        .hero-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .hero-description {
+            font-size: 17px;
+            color: var(--brand-dark-gray);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 28px;
+            background: var(--brand-text);
+            color: var(--brand-linen);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+        
+        .cta-button:hover {
+            background: var(--brand-dark-gray);
+        }
+        
+        .cta-button svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        
+        .about-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+        
+        .about-image-overlay .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+        }
+        
+        .about-image-overlay h3 {
+            font-size: 28px;
+            color: white;
+            font-weight: 300;
+        }
+        
+        .about-description {
+            margin-top: 24px;
+            font-size: 16px;
+            color: var(--brand-dark-gray);
+            line-height: 1.7;
+        }
+        
+        .skills-section h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--brand-border);
+        }
+        
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-item .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-light-gray);
+            margin-bottom: 4px;
+        }
+        
+        .skill-item h5 {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--brand-text);
+        }
+        
+        .skill-item .years {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            white-space: nowrap;
+        }
+        
+        .expertise-tags {
+            margin-top: 24px;
+        }
+        
+        .expertise-tags h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            padding: 10px 18px;
+            background: var(--brand-text);
+            color: white;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        
+        .certifications {
+            margin-top: 32px;
+        }
+        
+        .certifications h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 16px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+        }
+        
+        .cert-item .year {
+            color: var(--brand-light-gray);
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .project-card {
+            background: var(--brand-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .project-card img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 24px;
+        }
+        
+        .project-content .category {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-light-gray);
+            margin-bottom: 8px;
+        }
+        
+        .project-content h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        
+        .project-content p {
+            font-size: 15px;
+            color: var(--brand-dark-gray);
+            line-height: 1.6;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: var(--brand-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .skill-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        
+        .skill-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        
+        .skill-card-content {
+            padding: 20px;
+        }
+        
+        .skill-card-content h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .skill-card-content p {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+        }
+        
+        /* Experience Section */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .experience-card {
+            display: flex;
+            background: var(--brand-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 24px;
+            gap: 20px;
+        }
+        
+        .experience-logo {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .experience-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .experience-content {
+            flex: 1;
+        }
+        
+        .experience-content h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .experience-content p {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+        }
+        
+        /* Day in Life Section */
+        .day-in-life {
+            text-align: center;
+        }
+        
+        .day-in-life .section-description {
+            font-size: 16px;
+            color: var(--brand-dark-gray);
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+            text-align: left;
+        }
+        
+        .timeline-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .timeline-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .timeline-image img {
+            width: 100%;
+            border-radius: 8px;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+        }
+        
+        .timeline-content {
+            padding: 20px 0;
+        }
+        
+        .time-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--brand-text);
+            color: var(--brand-linen);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .time-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+        
+        .timeline-content p {
+            font-size: 15px;
+            color: var(--brand-dark-gray);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .timeline-content ul {
+            list-style: none;
+        }
+        
+        .timeline-content li {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .timeline-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            background: var(--brand-text);
+            border-radius: 50%;
+        }
+        
+        .closing-statement {
+            font-size: 16px;
+            color: var(--brand-dark-gray);
+            max-width: 800px;
+            margin: 40px auto 0;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        /* Side Projects Section */
+        .side-projects {
+            text-align: center;
+        }
+        
+        .side-projects .section-description {
+            font-size: 16px;
+            color: var(--brand-dark-gray);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .project-tool {
+            background: var(--brand-white);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--brand-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tool-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+        
+        .tool-title h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        
+        .tool-title p {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .form-group {
+            text-align: left;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--brand-border);
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--brand-text);
+            background: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .form-group input::placeholder {
+            color: var(--brand-light-gray);
+        }
+        
+        .lookup-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--brand-dark-gray);
+            margin-top: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .lookup-link svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .lookup-dropdown {
+            margin-top: 8px;
+            border: 1px solid var(--brand-border);
+            border-radius: 4px;
+            background: white;
+            max-height: 250px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .lookup-dropdown.active {
+            display: block;
+        }
+        
+        .lookup-search {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-bottom: 1px solid var(--brand-border);
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+        }
+        
+        .lookup-results {
+            list-style: none;
+        }
+        
+        .lookup-results li {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid var(--brand-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: background 0.2s;
+        }
+        
+        .lookup-results li:last-child {
+            border-bottom: none;
+        }
+        
+        .lookup-results li:hover {
+            background: var(--brand-linen);
+        }
+        
+        .lookup-results .hs-code {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color: var(--brand-text);
+            min-width: 100px;
+        }
+        
+        .lookup-results .hs-desc {
+            font-family: 'Roboto', sans-serif;
+            color: var(--brand-dark-gray);
+            font-size: 13px;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--brand-text);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .calculate-btn:hover {
+            background: var(--brand-dark-gray);
+        }
+        
+        .calculate-btn:disabled {
+            background: var(--brand-light-gray);
+            cursor: not-allowed;
+        }
+        
+        .calculate-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .results-section {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--brand-border);
+            display: none;
+        }
+        
+        .results-section.active {
+            display: block;
+        }
+        
+        .results-section h4 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--brand-text);
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .result-box {
+            background: var(--brand-linen);
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .result-box.highlight {
+            background: var(--brand-text);
+            color: white;
+        }
+        
+        .result-box .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 8px;
+        }
+        
+        .result-box.highlight .label {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .result-box .value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        
+        .result-note {
+            font-size: 13px;
+            color: var(--brand-light-gray);
+            font-style: italic;
+        }
+        
+        .architecture-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .arch-card {
+            background: var(--brand-white);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .arch-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .arch-card-header img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .arch-card-header h4 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .arch-card-header span {
+            font-size: 12px;
+            color: var(--brand-light-gray);
+        }
+        
+        .arch-card h5 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        
+        .arch-card p {
+            font-size: 14px;
+            color: var(--brand-dark-gray);
+            line-height: 1.6;
+        }
+        
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .use-case-btn {
+            padding: 20px;
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        
+        .use-case-btn:hover {
+            border-color: var(--brand-text);
+        }
+        
+        .use-case-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--brand-text);
+            margin-bottom: 12px;
+        }
+        
+        .use-case-btn h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        
+        .use-case-btn p {
+            font-size: 13px;
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+        }
+        
+        .use-case-btn.active {
+            border-color: var(--brand-text);
+            background: rgba(0,0,0,0.02);
+        }
+        
+        /* Evaluation Results */
+        .evaluation-results {
+            display: none;
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .evaluation-results.active {
+            display: block;
+        }
+        
+        .evaluation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--brand-border);
+        }
+        
+        .evaluation-header h4 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .run-evaluation-btn {
+            padding: 10px 24px;
+            background: var(--brand-text);
+            color: var(--brand-white);
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .run-evaluation-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .evaluation-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .eval-stat {
+            text-align: center;
+            padding: 20px;
+            background: var(--brand-linen);
+            border-radius: 8px;
+        }
+        
+        .eval-stat-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--brand-text);
+            margin-bottom: 4px;
+        }
+        
+        .eval-stat-value.success {
+            color: #059669;
+        }
+        
+        .eval-stat-value.warning {
+            color: #d97706;
+        }
+        
+        .eval-stat-value.error {
+            color: #dc2626;
+        }
+        
+        .eval-stat-label {
+            font-size: 11px;
+            color: var(--brand-dark-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+        }
+        
+        .evaluation-details {
+            margin-top: 32px;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .details-panel {
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+        
+        .details-panel h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        
+        .details-panel h5 svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .issues-panel {
+            border-left: 3px solid #fecaca;
+        }
+        
+        .actions-panel {
+            border-left: 3px solid #bfdbfe;
+        }
+        
+        .detail-issue-item {
+            padding: 16px;
+            background: #fef2f2;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .detail-issue-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .detail-issue-number {
+            font-weight: 500;
+            color: #dc2626;
+            margin-bottom: 8px;
+        }
+        
+        .detail-issue-desc {
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .detail-issue-data {
+            background: var(--brand-white);
+            padding: 10px 12px;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 12px;
+            color: var(--brand-text);
+            margin-bottom: 8px;
+            border: 1px solid #fecaca;
+        }
+        
+        .detail-issue-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .urgency-badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .detail-issue-number {
+            font-weight: 500;
+            color: var(--brand-text);
+        }
+        
+        .detail-issue-action {
+            background: #eff6ff;
+            padding: 10px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: var(--brand-dark-gray);
+            margin-bottom: 8px;
+            border: 1px solid #bfdbfe;
+        }
+        
+        .detail-issue-action strong {
+            color: #2563eb;
+        }
+        
+        .show-more-link {
+            text-align: center;
+            padding: 12px;
+            margin-top: 8px;
+            grid-column: 1 / -1;
+        }
+        
+        .show-more-link a {
+            color: var(--brand-text);
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .show-more-link a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 2x2 Issues Grid */
+        .issues-grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .issue-card {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 13px;
+        }
+        
+        .issue-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .issue-card-urgency {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .issue-card-urgency.critical {
+            background: #fecaca;
+            color: #991b1b;
+        }
+        
+        .issue-card-urgency.high {
+            background: #fed7aa;
+            color: #92400e;
+        }
+        
+        .issue-card-urgency.medium {
+            background: #bfdbfe;
+            color: #1e40af;
+        }
+        
+        .issue-card-urgency.low {
+            background: #e5e7eb;
+            color: #4b5563;
+        }
+        
+        .issue-card-title {
+            font-weight: 500;
+            color: var(--brand-text);
+        }
+        
+        .issue-card-desc {
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .issue-card-data {
+            background: var(--brand-white);
+            padding: 10px 12px;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 11px;
+            color: var(--brand-text);
+            border: 1px solid #fecaca;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .issue-card-action {
+            background: #eff6ff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+        }
+        
+        .issue-card-cost {
+            font-size: 12px;
+            font-weight: 500;
+            color: #dc2626;
+            margin-top: 8px;
+        }
+            border: 1px solid #fecaca;
+        }
+        
+        .detail-issue-cost {
+            font-size: 12px;
+            font-weight: 500;
+            color: #dc2626;
+        }
+        
+        #actionsContainer {
+            list-style: none;
+        }
+        
+        #actionsContainer li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--brand-border);
+            font-size: 13px;
+            color: var(--brand-dark-gray);
+        }
+        
+        #actionsContainer li:last-child {
+            border-bottom: none;
+        }
+        
+        #actionsContainer li::before {
+            content: "→";
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .evaluation-summary {
+            padding: 20px 24px;
+            background: var(--brand-linen);
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--brand-dark-gray);
+        }
+        
+        .evaluation-summary strong {
+            color: var(--brand-text);
+            font-weight: 500;
+        }
+            color: var(--brand-dark-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .issues-list {
+            margin-top: 24px;
+        }
+        
+        .issues-list h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .issue-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: #fef2f2;
+            border-left: 3px solid #dc2626;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        
+        .issue-item.hallucination {
+            background: #fff7ed;
+            border-left-color: #d97706;
+        }
+        
+        .issue-item.accuracy {
+            background: #eff6ff;
+            border-left-color: #2563eb;
+        }
+        
+        .issue-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        
+        .issue-content h6 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        
+        .issue-content p {
+            font-size: 13px;
+            color: var(--brand-dark-gray);
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        
+        .issue-cost {
+            font-size: 12px;
+            font-weight: 500;
+            color: #dc2626;
+        }
+        
+        .issue-item.hallucination .issue-cost {
+            color: #d97706;
+        }
+        
+        /* Morning Brief - Screenshot Style */
+        .morning-brief {
+            display: none;
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 12px;
+            padding: 32px;
+            margin-top: 32px;
+        }
+        
+        .morning-brief.active {
+            display: block;
+        }
+        
+        .brief-header {
+            margin-bottom: 24px;
+        }
+        
+        .brief-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .brief-title-row svg {
+            width: 24px;
+            height: 24px;
+            color: var(--brand-text);
+        }
+        
+        .brief-title-row h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .brief-title-row p {
+            font-size: 13px;
+            color: var(--brand-dark-gray);
+            margin: 4px 0 0 0;
+        }
+        
+        .brief-stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .brief-stat-card {
+            text-align: center;
+            padding: 20px 16px;
+            background: var(--brand-white);
+            border: 1px solid var(--brand-border);
+            border-radius: 8px;
+        }
+        
+        .brief-stat-card.saved {
+            background: #ecfdf5;
+            border-color: #a7f3d0;
+        }
+        
+        .brief-stat-label {
+            font-size: 11px;
+            color: var(--brand-dark-gray);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        
+        .brief-stat-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--brand-text);
+            margin-bottom: 4px;
+        }
+        
+        .brief-stat-value.negative {
+            color: #dc2626;
+        }
+        
+        .brief-stat-value.success {
+            color: #059669;
+        }
+        
+        .brief-stat-sublabel {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        
+        .brief-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .brief-column {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .brief-column.issues-column {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        
+        .brief-column.actions-column {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+        }
+        
+        .brief-column h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .brief-column h5 svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .brief-issues-list {
+            list-style: none;
+            counter-reset: issue-counter;
+        }
+        
+        .brief-issues-list li {
+            counter-increment: issue-counter;
+            padding: 10px 0;
+            font-size: 13px;
+            color: #dc2626;
+            border-bottom: 1px solid #fecaca;
+            line-height: 1.5;
+        }
+        
+        .brief-issues-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .brief-issues-list li::before {
+            content: counter(issue-counter) ". ";
+            font-weight: 500;
+        }
+        
+        .brief-actions-list {
+            list-style: none;
+        }
+        
+        .brief-actions-list li {
+            padding: 10px 0;
+            font-size: 13px;
+            color: #1e40af;
+            border-bottom: 1px solid #bfdbfe;
+            line-height: 1.5;
+        }
+        
+        .brief-actions-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .brief-actions-list li::before {
+            content: "→ ";
+            color: #2563eb;
+        }
+        
+        .brief-footer-summary {
+            padding: 16px 20px;
+            background: var(--brand-linen);
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--brand-dark-gray);
+        }
+            border-bottom: none;
+        }
+        
+        .action-priority {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .action-priority.high {
+            background: #fecaca;
+            color: #991b1b;
+        }
+        
+        .action-priority.medium {
+            background: #fed7aa;
+            color: #92400e;
+        }
+        
+        .action-priority.low {
+            background: #bbf7d0;
+            color: #166534;
+        }
+        
+        .generate-brief-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--brand-text);
+            color: var(--brand-white);
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            margin-top: 24px;
+        }
+        
+        .generate-brief-btn:hover {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--brand-linen);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-watermark {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Oswald', sans-serif;
+            font-size: 200px;
+            font-weight: 200;
+            color: rgba(0,0,0,0.03);
+            white-space: nowrap;
+            pointer-events: none;
+            letter-spacing: 0.05em;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-left h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+        
+        .footer-left p {
+            font-size: 15px;
+            color: var(--brand-dark-gray);
+            margin-bottom: 32px;
+            max-width: 400px;
+        }
+        
+        .footer-form input,
+        .footer-form textarea {
+            width: 100%;
+            padding: 16px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--brand-border);
+            font-size: 15px;
+            color: var(--brand-text);
+            margin-bottom: 20px;
+            outline: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .footer-form input::placeholder,
+        .footer-form textarea::placeholder {
+            color: var(--brand-light-gray);
+        }
+        
+        .footer-form textarea {
+            resize: none;
+            height: 80px;
+        }
+        
+        .send-btn {
+            padding: 14px 28px;
+            background: var(--brand-text);
+            color: white;
+            border: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .send-btn:hover {
+            background: var(--brand-dark-gray);
+        }
+        
+        .footer-right h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-dark-gray);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--brand-text);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--brand-border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--brand-light-gray);
+            position: relative;
+            z-index: 1;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .back-to-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--brand-dark-gray);
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .back-to-top svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero-image img {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid,
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .architecture-cards,
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-watermark {
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Simon Ting</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#day">My Day</a></li>
+                <li><a href="#side-projects">Side Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <svg class="search-icon" id="searchIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="cursor: pointer;">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="hero-ai-tech.jpg" alt="AI Technology Visualization">
+                </div>
+                <div>
+                    <span class="hero-badge">Product Manager & AI Innovator</span>
+                    <h1>Building the <span>Future of Logistics & Automation</span></h1>
+                    <p class="hero-subtitle">10+ Years Experience</p>
+                    <p class="hero-description">Results-driven Senior Product Manager specializing in B2B logistics SaaS platforms, AI-powered automation, and digital transformation. Proven track record driving 40% client adoption increases, 30% delivery error reductions, and 50% MRR growth through data-driven product strategies.</p>
+                    <a href="#projects" class="cta-button">
+                        View My Work
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div>
+                    <div class="about-image">
+                        <img src="about-tech-new.jpg" alt="Digital Transformation">
+                        <div class="about-image-overlay">
+                            <p class="label">Professional Summary</p>
+                            <h3>Driving Digital Transformation in Logistics</h3>
+                        </div>
+                    </div>
+                    <p class="about-description">I specialize in translating complex technical requirements into user-centric solutions that deliver measurable business outcomes. With deep expertise in TMS/WMS platforms, AI-powered automation, and process optimization, I've helped enterprise 3PLs, shippers, and freight forwarders achieve significant operational improvements. My approach combines data-driven decision making with strong cross-functional leadership to build products that scale. I have extensive experience with on-site training and go-live support, handling hypercare periods to ensure smooth customer transitions. I have worked with customers across Australia, Southeast Asia, Europe, and the US, adapting solutions to meet diverse regional needs and regulatory requirements.</p>
+                </div>
+                <div class="skills-section">
+                    <h4>Core Skills</h4>
+                    <div class="skill-item">
+                        <div>
+                            <p class="label">Core Skill</p>
+                            <h5>Product Strategy & Roadmap</h5>
+                        </div>
+                        <span class="years">5 years experience</span>
+                    </div>
+                    <div class="skill-item">
+                        <div>
+                            <p class="label">Domain Expertise</p>
+                            <h5>TMS/WMS Platforms</h5>
+                        </div>
+                        <span class="years">10 years experience</span>
+                    </div>
+                    <div class="skill-item">
+                        <div>
+                            <p class="label">Certified</p>
+                            <h5>Agile/Scrum Leadership</h5>
+                        </div>
+                        <span class="years">5 years experience</span>
+                    </div>
+                    <div class="skill-item">
+                        <div>
+                            <p class="label">Specialization</p>
+                            <h5>Project Logistics</h5>
+                        </div>
+                        <span class="years">5 years experience</span>
+                    </div>
+                    
+                    <div class="expertise-tags">
+                        <h4>Domain Expertise</h4>
+                        <div class="tags">
+                            <span class="tag">AI/ML Automation</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Process Optimization</span>
+                            <span class="tag">Digital Transformation</span>
+                            <span class="tag">Supply Chain Management</span>
+                            <span class="tag">Integration Architecture</span>
+                        </div>
+                    </div>
+                    
+                    <div class="certifications">
+                        <h4>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 6px;">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            Certifications
+                        </h4>
+                        <div class="cert-item">
+                            <span class="year">2022</span>
+                            <span>Certified ScrumMaster (CSM)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="clockwork-home.jpg" alt="Clockwork Delivery Platform">
+                    <div class="project-content">
+                        <p class="category">SAAS Platform</p>
+                        <h3>Clockwork Delivery Platform</h3>
+                        <p>A comprehensive shipment management and driver dispatching platform featuring intelligent load builder and scheduler. The system optimizes delivery assignments, manages driver workflows, and provides real-time visibility into delivery status, ensuring efficient last-mile operations and enhanced customer satisfaction. Worked closely with stakeholders on the design process, prioritizing and adding features based on usability testing and market research to continuously improve the platform.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-logistics-platform.jpg" alt="TMS Integration Hub">
+                    <div class="project-content">
+                        <p class="category">Integration</p>
+                        <h3>TMS Integration Hub</h3>
+                        <p>An enterprise integration solution that connects customer ERP systems with transportation management platforms. Supports multiple integration protocols including EDI, JSON, and REST APIs, enabling seamless data exchange for order processing, shipment status synchronization, and real-time tracking updates across the supply chain. Worked directly with customer integration teams to help with data mapping and ensure smooth connectivity between systems.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-mobile-app.jpg" alt="Driver Mobile App">
+                    <div class="project-content">
+                        <p class="category">Mobile Product</p>
+                        <h3>Driver Mobile App</h3>
+                        <p>A multi-role mobile application that empowers drivers to manage deliveries, capture electronic proof of delivery (ePOD), and confirm shipments in real-time. Also supports warehouse staff and receivers in performing goods confirmation, staging, and delivery verification tasks through intuitive role-based interfaces. Constantly enhanced based on direct feedback from drivers and customers, ensuring the app evolves to meet real-world operational needs and user expectations.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-wms.jpg" alt="Project Logistics Ledger">
+                    <div class="project-content">
+                        <p class="category">Supply Chain</p>
+                        <h3>Project Logistics Ledger</h3>
+                        <p>An end-to-end materials tracking system built for a customer managing logistics for a renewable energy company. The platform helps them manage complex moves across construction sites, warehouses, ports, and manufacturing facilities. Features an AI-enhanced shipment builder that recommends optimal shipping configurations based on what is available at each location, streamlining the entire logistics planning process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="skill-strategy.jpg" alt="Cross-Functional Leadership">
+                    <div class="skill-card-content">
+                        <h3>Cross-Functional Leadership</h3>
+                        <p>Leading diverse teams across engineering, design, and business to deliver cohesive product solutions</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="hero-portrait.jpg" alt="Stakeholder Management">
+                    <div class="skill-card-content">
+                        <h3>Stakeholder Management</h3>
+                        <p>Executive communication, client relations, and building strategic partnerships</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="skill-agile.jpg" alt="Go-to-Market Strategy">
+                    <div class="skill-card-content">
+                        <h3>Go-to-Market Strategy</h3>
+                        <p>Product launches, market positioning, and driving user adoption</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="skill-data.jpg" alt="User Research">
+                    <div class="skill-card-content">
+                        <h3>User Research</h3>
+                        <p>Customer interviews, usability testing, and translating insights into product features</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="skill-ai.jpg" alt="Product Documentation">
+                    <div class="skill-card-content">
+                        <h3>Product Documentation</h3>
+                        <p>User guides, feature specifications, release notes, and onboarding materials</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <img src="clockwork-logo-new.png" alt="Clockwork Logistics">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Senior Product Manager | Clockwork Logistics</h3>
+                        <p>Owned product roadmap for multi-tenant logistics SaaS. Led AI automation initiatives and increased enterprise client adoption.</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <img src="nuvizz-logo.png" alt="NuVizz Inc">
+                    </div>
+                    <div class="experience-content">
+                        <h3>TMS Product Expert | NuVizz Inc</h3>
+                        <p>Primary customer liaison for TMS platform. Guided enterprise clients through route optimization and automated dispatch adoption.</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <img src="clockwork-logo-new.png" alt="Clockwork Logistics">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Product Manager | Clockwork Logistics</h3>
+                        <p>Drove MRR growth through advanced inventory modules. Launched mobile delivery app and achieved significant user growth.</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <img src="clockwork-logo-new.png" alt="Clockwork Logistics">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Customer Success Director | Clockwork Logistics</h3>
+                        <p>Expanded 3PL portfolio with revenue uplift. Improved NPS scores and reduced driver churn through strategic initiatives.</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <img src="openport-logo.png" alt="OpenPort">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Global Customer Success Manager | OpenPort</h3>
+                        <p>Accelerated client deployment and increased driver retention through data-driven engagement strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Day in My Life Section -->
+    <section id="day" class="day-in-life">
+        <div class="container">
+            <h2 class="section-title">A Day in My Life</h2>
+            <p class="section-description">A glimpse into my daily routine as a Senior Product Manager in logistics SaaS, from morning standups to late-night testing sessions. (P.S. These photos are AI-generated because I'm too busy actually working to take pictures of myself working – but hey, they capture the vibe!)</p>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-emails.jpg" alt="Daily Calls">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        Early Morning
+                    </span>
+                    <h3>Daily Calls & Team Sync</h3>
+                    <p>I start my day with daily calls to align with the development team, review overnight communications, and check key metrics from the previous day.</p>
+                    <ul>
+                        <li>Lead daily standups to track sprint progress</li>
+                        <li>Review JIRA board and discuss blockers</li>
+                        <li>Check daily metrics and KPIs from previous day</li>
+                        <li>Prioritize tasks based on incoming requests</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-standup.jpg" alt="Sprint Planning">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Morning or Afternoon
+                    </span>
+                    <h3>Sprint Refinement & Planning</h3>
+                    <p>Sprint refinement sessions happen throughout the day, either as part of daily calls or scheduled as separate meetings in the afternoon.</p>
+                    <ul>
+                        <li>Conduct backlog refinement sessions</li>
+                        <li>Clarify requirements and answer technical questions</li>
+                        <li>Align on delivery timelines and dependencies</li>
+                        <li>Plan and prioritize upcoming sprints</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-customer.jpg" alt="Client Consultation">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Throughout the Day
+                    </span>
+                    <h3>Client Consultation & Support</h3>
+                    <p>Regular touchpoints with enterprise clients happen at various times, addressing questions, gathering feedback, and providing guidance on platform usage.</p>
+                    <ul>
+                        <li>Handle customer inquiries and support requests</li>
+                        <li>Conduct product demos for prospects</li>
+                        <li>Gather feature requests and pain points</li>
+                        <li>Provide guidance on using the systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-prd.jpg" alt="PRD Writing">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Afternoon
+                    </span>
+                    <h3>PRD Writing & Backlog Management</h3>
+                    <p>Post-lunch hours are dedicated to deep work on product documentation, writing user stories, and managing the backlog for upcoming sprints.</p>
+                    <ul>
+                        <li>Write and update product requirement documents</li>
+                        <li>Create user stories and acceptance criteria</li>
+                        <li>Align and prioritize JIRA tickets</li>
+                        <li>Plan and prepare for next sprints</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-analytics.jpg" alt="Research and Analysis">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        Late Afternoon
+                    </span>
+                    <h3>Research, Analysis & Stakeholder Updates</h3>
+                    <p>Later in the day I focus on industry research, competitive analysis, and fortnightly executive updates on roadmap progress.</p>
+                    <ul>
+                        <li>Research industry trends and competitor moves</li>
+                        <li>Analyze product metrics and user behavior</li>
+                        <li>Prepare for fortnightly executive roadmap reviews</li>
+                        <li>Review customer feedback and NPS surveys</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="day-male-testing.jpg" alt="Testing">
+                </div>
+                <div class="timeline-content">
+                    <span class="time-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                        Late Day to Evening
+                    </span>
+                    <h3>Testing, UAT & Wrap Up</h3>
+                    <p>Days often extend into the evening for usability testing, user acceptance testing, and ensuring releases are ready for deployment.</p>
+                    <ul>
+                        <li>Conduct usability testing on new features</li>
+                        <li>Perform UAT before releases</li>
+                        <li>Support testing sessions that run late</li>
+                        <li>Document decisions and prepare for next day</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="closing-statement">Typical day? 8 AM to 6 PM. Release week? More like 8 AM to 'why is it suddenly midnight and why is the staging environment on fire?' Post-deployment testing hits different when you're questioning every life choice that led you here. Wouldn't trade it though – the bugs are annoying, but the dopamine hit when everything actually works? Chef's kiss.</p>
+        </div>
+    </section>
+
+    <!-- Side Projects Section -->
+    <section id="side-projects" class="side-projects">
+        <div class="container">
+            <h2 class="section-title">Side Projects</h2>
+            <p class="section-description">Personal projects and experiments I work on outside of my professional role. These initiatives help me learn about different AI models and build technical skills – because let's face it, being a 'legacy PM' who just writes specs isn't enough anymore. In today's age of AI, you need to understand the tech, experiment with the tools, and actually build things yourself. I'm constantly working on different side projects to build up my skills in AI automation, data analytics, and full-stack development.</p>
+            
+            <p class="section-description">An AI-enabled tariff calculator that automatically searches and updates daily tariff rates using intelligent agents, ensuring businesses have access to the most current international trade data for accurate cost calculations.</p>
+            
+            <div class="project-tool">
+                <div class="tool-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <line x1="8" y1="6" x2="16" y2="6"></line>
+                            <line x1="8" y1="10" x2="16" y2="10"></line>
+                            <line x1="8" y1="14" x2="12" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="tool-title">
+                        <h3>Tariff Calculator</h3>
+                        <p>Calculate import duties and taxes</p>
+                    </div>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>HS Code</label>
+                        <input type="text" id="hsCode" placeholder="e.g., 8471.30.01" autocomplete="off">
+                        <span class="lookup-link" id="lookupToggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            Look up HS code by product name
+                            <svg id="lookupArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px; transition: transform 0.2s;">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </span>
+                        <div class="lookup-dropdown" id="lookupDropdown">
+                            <input type="text" class="lookup-search" id="lookupSearch" placeholder="Type product name...">
+                            <ul class="lookup-results" id="lookupResults"></ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Value (USD)</label>
+                        <input type="number" id="productValue" placeholder="Enter value">
+                    </div>
+                    <div class="form-group">
+                        <label>Origin Country</label>
+                        <select id="originCountry">
+                            <option value="">Select country</option>
+                            <option value="CN">China</option>
+                            <option value="MX">Mexico</option>
+                            <option value="CA">Canada</option>
+                            <option value="EU">European Union</option>
+                            <option value="JP">Japan</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="IN">India</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="KR">South Korea</option>
+                            <option value="AU">Australia</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Destination Country</label>
+                        <select id="destinationCountry">
+                            <option value="US" selected>United States</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" id="calculateBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                        <line x1="8" y1="6" x2="16" y2="6"></line>
+                        <line x1="8" y1="10" x2="16" y2="10"></line>
+                        <line x1="8" y1="14" x2="12" y2="14"></line>
+                    </svg>
+                    Calculate Tariff
+                </button>
+                
+                <div class="results-section" id="resultsSection">
+                    <h4>Calculation Results</h4>
+                    <div class="result-grid">
+                        <div class="result-box">
+                            <div class="label">Base Duty</div>
+                            <div class="value" id="baseDuty">$0.00</div>
+                        </div>
+                        <div class="result-box">
+                            <div class="label">Additional Tariffs</div>
+                            <div class="value" id="additionalTariffs">$0.00</div>
+                        </div>
+                        <div class="result-box highlight">
+                            <div class="label">Total Landed Cost</div>
+                            <div class="value" id="totalCost">$0.00</div>
+                        </div>
+                    </div>
+                    <p class="result-note" id="resultNote">* Estimates based on current US tariff rates (2025-2026). Actual duties may vary.</p>
+                </div>
+            </div>
+            
+            <div class="architecture-cards">
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="tariff-ai-agent.jpg" alt="AI Agent">
+                        <div>
+                            <h4>AI Agent Architecture</h4>
+                            <span>Core Technology</span>
+                        </div>
+                    </div>
+                    <h5>Intelligent Search Automation</h5>
+                    <p>The system employs specialized AI agents that autonomously search multiple official sources including government trade databases, customs authorities, and international trade organizations. These agents use natural language processing to understand tariff classifications and extract relevant duty rates, taxes, and trade agreement benefits.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="tariff-search.jpg" alt="Data Pipeline">
+                        <div>
+                            <h4>Real-Time Data Pipeline</h4>
+                            <span>Infrastructure</span>
+                        </div>
+                    </div>
+                    <h5>Daily Update Mechanism</h5>
+                    <p>A robust ETL pipeline orchestrates daily data collection at scheduled intervals. The system compares new data against existing records, identifies changes in tariff rates or regulations, and maintains a complete audit trail. Updates are automatically propagated to the calculation engine within minutes of detection.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="tariff-hero.jpg" alt="Calculation Engine">
+                        <div>
+                            <h4>Calculation Engine</h4>
+                            <span>Product Feature</span>
+                        </div>
+                    </div>
+                    <h5>Multi-Factor Tariff Computation</h5>
+                    <p>The calculator processes HS codes, country of origin, destination markets, product categories, and applicable trade agreements to compute total landed costs. It accounts for ad valorem duties, specific duties, compound duties, and preferential rates under FTAs to provide accurate cost projections.</p>
+                </div>
+            </div>
+            
+            <p class="section-description" style="margin-top: 60px;">An autonomous AI evaluation system for logistics operations. Monitors AI-generated outputs overnight, checking for data accuracy, hallucinations, and compliance issues. Generates daily "Morning Brief" reports highlighting cost-saving opportunities and data quality issues before they impact operations.</p>
+            
+            <div class="project-tool">
+                <div class="tool-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <line x1="8" y1="6" x2="16" y2="6"></line>
+                            <line x1="8" y1="10" x2="16" y2="10"></line>
+                            <line x1="8" y1="14" x2="12" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="tool-title">
+                        <h3>AI Evaluation Agent</h3>
+                        <p>Overnight monitoring for AI accuracy & cost optimization</p>
+                    </div>
+                </div>
+                
+                <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-dark-gray); margin-bottom: 16px;">Select Use Case to Evaluate</p>
+                
+                <div class="use-case-grid">
+                    <div class="use-case-btn" data-usecase="eta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h4>ETA Prediction Accuracy</h4>
+                        <p>Monitor AI-generated delivery time estimates against actual delivery times</p>
+                    </div>
+                    <div class="use-case-btn" data-usecase="carrier">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <h4>Carrier AI Matching</h4>
+                        <p>Evaluate AI carrier recommendations for service area validity and capacity</p>
+                    </div>
+                    <div class="use-case-btn" data-usecase="document">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <h4>Document Data Extraction</h4>
+                        <p>Check AI-extracted data from BOLs, PODs, and customs documents for accuracy</p>
+                    </div>
+                    <div class="use-case-btn" data-usecase="rate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                        </svg>
+                        <h4>Automated Rate Quoting</h4>
+                        <p>Verify AI-generated freight quotes against market rates and contract terms</p>
+                    </div>
+                    <div class="use-case-btn" data-usecase="customer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <h4>Customer Communication AI</h4>
+                        <p>Review AI-generated customer notifications for accuracy and tone</p>
+                    </div>
+                    <div class="use-case-btn" data-usecase="route">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                        </svg>
+                        <h4>Route Optimization</h4>
+                        <p>Validate AI-optimized delivery routes for efficiency, compliance, and cost-effectiveness</p>
+                    </div>
+                </div>
+                
+                <!-- Evaluation Results Panel -->
+                <div class="evaluation-results" id="evaluationResults">
+                    <div class="evaluation-header">
+                        <h4 id="evalTitle">Select a Use Case</h4>
+                    </div>
+                    <div class="evaluation-stats" id="evalStats">
+                        <div class="eval-stat">
+                            <div class="eval-stat-value" id="statTotal">-</div>
+                            <div class="eval-stat-label">Evaluated<br><span style="font-size: 11px; color: #9ca3af;">AI outputs</span></div>
+                        </div>
+                        <div class="eval-stat">
+                            <div class="eval-stat-value error" id="statIssues">-</div>
+                            <div class="eval-stat-label">Issues Found<br><span style="font-size: 11px; color: #9ca3af;">need attention</span></div>
+                        </div>
+                        <div class="eval-stat">
+                            <div class="eval-stat-value" id="statAccuracy">-</div>
+                            <div class="eval-stat-label">Accuracy<br><span style="font-size: 11px; color: #9ca3af;">overall score</span></div>
+                        </div>
+                        <div class="eval-stat" style="background: #ecfdf5; border: 1px solid #a7f3d0;">
+                            <div class="eval-stat-value success" id="statCost">-</div>
+                            <div class="eval-stat-label">Cost Saved<br><span style="font-size: 11px; color: #059669;">by catching errors</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="evaluation-details" id="evaluationDetails" style="display: none;">
+                        <div class="issues-grid-2x2" id="issuesContainer"></div>
+                        <div class="evaluation-summary" id="evalSummary"></div>
+                    </div>
+                </div>
+                
+                <!-- Morning Brief -->
+                <div class="morning-brief" id="morningBrief">
+                    <div class="brief-header">
+                        <div class="brief-title-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                            <div>
+                                <h4>Morning Brief</h4>
+                                <p id="briefSubtitle">Overnight evaluation results</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brief-stats-row">
+                        <div class="brief-stat-card">
+                            <div class="brief-stat-label">EVALUATED</div>
+                            <div class="brief-stat-value" id="briefEvaluated">0</div>
+                            <div class="brief-stat-sublabel">AI outputs</div>
+                        </div>
+                        <div class="brief-stat-card">
+                            <div class="brief-stat-label">ISSUES FOUND</div>
+                            <div class="brief-stat-value negative" id="briefIssues">0</div>
+                            <div class="brief-stat-sublabel">need attention</div>
+                        </div>
+                        <div class="brief-stat-card">
+                            <div class="brief-stat-label">ACCURACY</div>
+                            <div class="brief-stat-value" id="briefAccuracy">0%</div>
+                            <div class="brief-stat-sublabel">overall score</div>
+                        </div>
+                        <div class="brief-stat-card saved">
+                            <div class="brief-stat-label">COST SAVED</div>
+                            <div class="brief-stat-value success" id="briefSaved">$0</div>
+                            <div class="brief-stat-sublabel">by catching errors</div>
+                        </div>
+                    </div>
+                    <div class="brief-columns">
+                        <div class="brief-column issues-column">
+                            <h5>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                Top Issues Detected
+                            </h5>
+                            <ol class="brief-issues-list" id="briefIssuesList"></ol>
+                        </div>
+                        <div class="brief-column actions-column">
+                            <h5>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                    <polyline points="9 11 12 14 22 4"></polyline>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                </svg>
+                                Recommended Actions
+                            </h5>
+                            <ul class="brief-actions-list" id="briefActionsList"></ul>
+                        </div>
+                    </div>
+                    <div class="brief-footer-summary" id="briefFooterSummary"></div>
+                </div>
+            </div>
+            
+            <div class="architecture-cards">
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="project-ai-automation.jpg" alt="Evaluation Engine">
+                        <div>
+                            <h4>Autonomous Evaluation Engine</h4>
+                            <span>Core Technology</span>
+                        </div>
+                    </div>
+                    <h5>Overnight AI Decision Monitoring</h5>
+                    <p>The evaluation agent operates autonomously overnight, processing 100% of AI-generated decisions against logistics-specific accuracy criteria. It evaluates ETA predictions, carrier assignments, document extractions, and rate calculations against historical data patterns and business rules to identify anomalies and potential errors before they impact operations.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="skill-data.jpg" alt="Hallucination Detection">
+                        <div>
+                            <h4>Hallucination Detection System</h4>
+                            <span>Infrastructure</span>
+                        </div>
+                    </div>
+                    <h5>Cross-Validation & Source Verification</h5>
+                    <p>The system cross-validates AI outputs against authoritative source data including carrier service area databases, product master files, contract rate tables, and historical delivery records. Confidence scoring algorithms flag outputs below 85% accuracy for manual review, preventing costly errors from reaching production systems.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-card-header">
+                        <img src="day-analytics.jpg" alt="Morning Brief">
+                        <div>
+                            <h4>Morning Brief Generator</h4>
+                            <span>Product Feature</span>
+                        </div>
+                    </div>
+                    <h5>Daily Operations Intelligence Reports</h5>
+                    <p>Automatically generates comprehensive Morning Brief reports delivered to operations managers at the start of each day. Reports include evaluation scores, top issues requiring attention, quantified cost impacts of detected errors, and prioritized recommendations with actionable steps to improve AI accuracy and reduce operational risk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-watermark">SIMON TING</div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Let's Connect</h3>
+                    <p>Interested in discussing logistics technology, AI automation, or product strategy? Reach out and let's build something great together.</p>
+                    <form class="footer-form" id="contactForm">
+                        <input type="email" id="contactEmail" placeholder="Your email address" required>
+                        <textarea id="contactMessage" placeholder="Your message" required></textarea>
+                        <button type="submit" class="send-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-right">
+                    <h4>Connect</h4>
+                    <a href="https://www.linkedin.com/in/simon-ting-19262a64/" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Simon Ting. All rights reserved.</p>
+                <div style="display: flex; align-items: center; gap: 40px;">
+                    <p>Senior Product Manager | Logistics SaaS | AI & Automation</p>
+                    <a href="#" class="back-to-top">
+                        Back to Top
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // HS Code Database with 2025-2026 tariff rates
+        const hsCodeDatabase = [
+            { code: '8471.30.01', description: 'Portable automatic data processing machines', category: 'electronics', baseRate: 0 },
+            { code: '8471.41.01', description: 'Automatic data processing machines', category: 'electronics', baseRate: 0 },
+            { code: '8517.12.00', description: 'Telephones for cellular networks', category: 'electronics', baseRate: 0 },
+            { code: '8517.62.00', description: 'Machines for reception, conversion and transmission', category: 'electronics', baseRate: 0 },
+            { code: '8528.72.64', description: 'Reception apparatus for television', category: 'electronics', baseRate: 3.9 },
+            { code: '8541.10.00', description: 'Diodes, other than photosensitive or light emitting diodes', category: 'electronics', baseRate: 0 },
+            { code: '8541.40.60', description: 'Photosensitive semiconductor devices', category: 'electronics', baseRate: 0 },
+            { code: '8542.31.00', description: 'Electronic integrated circuits: processors and controllers', category: 'electronics', baseRate: 0 },
+            { code: '6203.42.11', description: "Men's trousers and breeches of cotton", category: 'apparel', baseRate: 16.6 },
+            { code: '6204.62.11', description: "Women's trousers and breeches of cotton", category: 'apparel', baseRate: 16.6 },
+            { code: '6109.10.00', description: 'T-shirts, singlets and other vests of cotton', category: 'apparel', baseRate: 16.5 },
+            { code: '6110.20.20', description: 'Sweaters, pullovers and similar articles of cotton', category: 'apparel', baseRate: 16.5 },
+            { code: '6201.11.00', description: "Men's overcoats of wool", category: 'apparel', baseRate: 16.0 },
+            { code: '8703.23.00', description: 'Motor cars with spark-ignition engine', category: 'automotive', baseRate: 2.5 },
+            { code: '8708.80.00', description: 'Motor vehicle parts and accessories', category: 'automotive', baseRate: 2.5 },
+            { code: '8708.94.50', description: 'Gear boxes for motor vehicles', category: 'automotive', baseRate: 2.5 },
+            { code: '0901.21.00', description: 'Coffee beans and roasted coffee', category: 'food', baseRate: 0 },
+            { code: '0902.10.00', description: 'Green tea', category: 'food', baseRate: 6.4 },
+            { code: '1905.90.00', description: 'Bread, pastries, cakes, biscuits and other bakers wares', category: 'food', baseRate: 3.0 },
+            { code: '2009.80.00', description: 'Fruit juices', category: 'food', baseRate: 7.6 },
+            { code: '3004.90.00', description: 'Medicaments', category: 'pharma', baseRate: 0 },
+            { code: '3002.13.00', description: 'Immunological products', category: 'pharma', baseRate: 0 },
+            { code: '3926.90.99', description: 'Other articles of plastics', category: 'plastics', baseRate: 5.3 },
+            { code: '3923.10.00', description: 'Boxes, cases, crates and similar articles of plastics', category: 'plastics', baseRate: 3.0 },
+            { code: '3920.10.00', description: 'Plates, sheets, film, foil of polymers of ethylene', category: 'plastics', baseRate: 4.2 },
+            { code: '7308.90.00', description: 'Structures and parts of structures of iron or steel', category: 'steel', baseRate: 0 },
+            { code: '7304.41.30', description: 'Tubes, pipes and hollow profiles of stainless steel', category: 'steel', baseRate: 0 },
+            { code: '7323.93.00', description: 'Table, kitchen or other household articles of stainless steel', category: 'steel', baseRate: 3.4 },
+            { code: '6403.99.90', description: 'Footwear with outer soles of rubber or plastics', category: 'footwear', baseRate: 8.5 },
+            { code: '6404.11.90', description: 'Footwear with textile uppers', category: 'footwear', baseRate: 12.5 },
+            { code: '9102.21.00', description: 'Wrist-watches, electrically operated', category: 'watches', baseRate: 0 },
+            { code: '9101.11.40', description: 'Wrist-watches with precious metal case', category: 'watches', baseRate: 0 },
+            { code: '9503.00.00', description: 'Tricycles, scooters, pedal cars and similar wheeled toys', category: 'toys', baseRate: 0 },
+            { code: '9504.50.00', description: 'Video game consoles and machines', category: 'toys', baseRate: 0 },
+            { code: '9403.60.90', description: 'Other wooden furniture', category: 'furniture', baseRate: 0 },
+            { code: '9403.20.00', 'description': 'Metal furniture', category: 'furniture', baseRate: 0 },
+            { code: '7616.99.51', description: 'Other articles of aluminum', category: 'aluminum', baseRate: 5.7 },
+            { code: '7604.10.10', description: 'Bars, rods and profiles of aluminum', category: 'aluminum', baseRate: 0 },
+            { code: '8407.31.00', description: 'Spark-ignition reciprocating piston engines', category: 'machinery', baseRate: 2.5 },
+            { code: '8414.51.00', description: 'Table, floor, wall, window, ceiling or roof fans', category: 'machinery', baseRate: 4.7 },
+            { code: '8421.21.00', description: 'Machinery and apparatus for filtering or purifying water', category: 'machinery', baseRate: 0 },
+            { code: '8443.32.00', description: 'Printers, copying machines and facsimile machines', category: 'machinery', baseRate: 0 },
+            { code: '8504.40.70', description: 'Static converters', category: 'electrical', baseRate: 0 },
+            { code: '8507.20.80', description: 'Electric storage batteries', category: 'electrical', baseRate: 3.4 },
+            { code: '8539.10.00', description: 'Sealed beam lamp units', category: 'electrical', baseRate: 2.7 },
+            { code: '9001.10.00', description: 'Optical fibers and optical fiber bundles', category: 'optical', baseRate: 0 },
+            { code: '9004.10.00', description: 'Sunglasses', category: 'optical', baseRate: 2.5 },
+            { code: '9018.39.00', description: 'Instruments and appliances used in medical sciences', category: 'medical', baseRate: 0 },
+            { code: '9021.10.40', description: 'Orthopedic or fracture appliances', category: 'medical', baseRate: 0 },
+            { code: '9031.80.80', description: 'Other instruments, appliances and machines', category: 'measuring', baseRate: 0 },
+            { code: '9032.89.60', description: 'Automatic regulating or controlling instruments', category: 'measuring', baseRate: 0 },
+        ];
+
+        // Country-specific additional tariffs (2025-2026 rates)
+        const countryTariffs = {
+            'CN': { // China
+                reciprocal: 10,
+                fentanyl: 10,
+                section301: 25,
+                note: 'China: 10% reciprocal + 10% fentanyl + 25% Section 301'
+            },
+            'MX': { // Mexico
+                reciprocal: 0,
+                usmca: true,
+                note: 'Mexico: 0% (USMCA-compliant goods duty-free)'
+            },
+            'CA': { // Canada
+                reciprocal: 0,
+                usmca: true,
+                note: 'Canada: 0% (USMCA-compliant goods duty-free)'
+            },
+            'EU': { // European Union
+                reciprocal: 10,
+                note: 'EU: 10% reciprocal tariff'
+            },
+            'JP': { // Japan
+                reciprocal: 10,
+                note: 'Japan: 10% reciprocal tariff'
+            },
+            'GB': { // United Kingdom
+                reciprocal: 10,
+                note: 'UK: 10% reciprocal tariff'
+            },
+            'IN': { // India
+                reciprocal: 10,
+                note: 'India: 10% reciprocal tariff'
+            },
+            'VN': { // Vietnam
+                reciprocal: 10,
+                note: 'Vietnam: 10% reciprocal tariff'
+            },
+            'KR': { // South Korea
+                reciprocal: 10,
+                fta: true,
+                note: 'South Korea: 10% reciprocal (KORUS FTA may reduce)'
+            },
+            'AU': { // Australia
+                reciprocal: 10,
+                fta: true,
+                note: 'Australia: 10% reciprocal (AUSFTA may reduce)'
+            },
+            'OTHER': {
+                reciprocal: 10,
+                note: 'Other countries: 10% reciprocal tariff'
+            }
+        };
+
+        // DOM Elements
+        const hsCodeInput = document.getElementById('hsCode');
+        const productValueInput = document.getElementById('productValue');
+        const originCountrySelect = document.getElementById('originCountry');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const resultsSection = document.getElementById('resultsSection');
+        const baseDutyEl = document.getElementById('baseDuty');
+        const additionalTariffsEl = document.getElementById('additionalTariffs');
+        const totalCostEl = document.getElementById('totalCost');
+        const resultNote = document.getElementById('resultNote');
+
+        // Lookup elements
+        const lookupToggle = document.getElementById('lookupToggle');
+        const lookupDropdown = document.getElementById('lookupDropdown');
+        const lookupSearch = document.getElementById('lookupSearch');
+        const lookupResults = document.getElementById('lookupResults');
+        const lookupArrow = document.getElementById('lookupArrow');
+
+        // Toggle lookup dropdown
+        lookupToggle.addEventListener('click', () => {
+            lookupDropdown.classList.toggle('active');
+            lookupArrow.style.transform = lookupDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+            if (lookupDropdown.classList.contains('active')) {
+                lookupSearch.focus();
+                renderLookupResults(hsCodeDatabase);
+            }
+        });
+
+        // Search functionality
+        lookupSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = hsCodeDatabase.filter(item => 
+                item.description.toLowerCase().includes(query) ||
+                item.code.includes(query)
+            );
+            renderLookupResults(filtered);
+        });
+
+        // Render lookup results
+        function renderLookupResults(results) {
+            lookupResults.innerHTML = '';
+            if (results.length === 0) {
+                lookupResults.innerHTML = '<li style="padding: 16px; color: var(--brand-light-gray);">No matching products found</li>';
+                return;
+            }
+            results.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="hs-code">${item.code}</span><span class="hs-desc">${item.description}</span>`;
+                li.addEventListener('click', () => {
+                    hsCodeInput.value = item.code;
+                    lookupDropdown.classList.remove('active');
+                    lookupArrow.style.transform = 'rotate(0)';
+                });
+                lookupResults.appendChild(li);
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.form-group')) {
+                lookupDropdown.classList.remove('active');
+                lookupArrow.style.transform = 'rotate(0)';
+            }
+        });
+
+        // Calculate tariff
+        calculateBtn.addEventListener('click', () => {
+            const hsCode = hsCodeInput.value.trim();
+            const productValue = parseFloat(productValueInput.value);
+            const originCountry = originCountrySelect.value;
+
+            if (!hsCode || !productValue || !originCountry) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Find HS code data
+            const hsData = hsCodeDatabase.find(item => item.code === hsCode);
+            if (!hsData) {
+                alert('HS Code not found. Please use the lookup feature to find a valid code.');
+                return;
+            }
+
+            // Calculate base duty
+            const baseDuty = (productValue * hsData.baseRate) / 100;
+
+            // Calculate additional tariffs
+            let additionalTariffRate = 0;
+            let tariffNote = '';
+
+            if (countryTariffs[originCountry]) {
+                const countryData = countryTariffs[originCountry];
+                if (countryData.usmca) {
+                    // USMCA countries may have reduced rates
+                    additionalTariffRate = 0;
+                    tariffNote = countryData.note;
+                } else {
+                    additionalTariffRate = countryData.reciprocal;
+                    if (originCountry === 'CN') {
+                        additionalTariffRate += countryData.fentanyl + countryData.section301;
+                    }
+                    tariffNote = countryData.note;
+                }
+            } else {
+                additionalTariffRate = 10; // Default reciprocal tariff
+                tariffNote = 'Standard 10% reciprocal tariff applies';
+            }
+
+            const additionalTariffs = (productValue * additionalTariffRate) / 100;
+            const totalCost = productValue + baseDuty + additionalTariffs;
+
+            // Display results
+            baseDutyEl.textContent = '$' + baseDuty.toFixed(2);
+            additionalTariffsEl.textContent = '$' + additionalTariffs.toFixed(2);
+            totalCostEl.textContent = '$' + totalCost.toFixed(2);
+            resultNote.textContent = '* ' + tariffNote + '. Estimates based on 2025-2026 US tariff rates.';
+
+            resultsSection.classList.add('active');
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchIcon').addEventListener('click', () => {
+            const searchTerm = prompt('Search the portfolio:');
+            if (searchTerm) {
+                alert('Search functionality coming soon! You searched for: ' + searchTerm);
+            }
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:simon.ting@example.com?subject=Portfolio Contact from ${email}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            alert('Thank you for your message! Your email client should open with a pre-filled message.');
+        });
+
+        // AI Evaluation Agent
+        const useCaseData = {
+            eta: {
+                title: 'ETA Prediction Accuracy Evaluation',
+                totalDecisions: 1247,
+                issuesFound: 23,
+                accuracy: 98.2,
+                costSaved: 18450,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'Physically Impossible ETA', 
+                        description: 'AI predicted delivery 3 hours earlier than physically possible given distance and speed limits',
+                        data: 'Shipment: SH-2025-08472 | Route: Chicago, IL → Detroit, MI (283 miles) | AI ETA: 2.5 hours | Actual: 5.5 hours (min)',
+                        cost: 850,
+                        action: 'Add validation layer for physically possible ETAs based on distance/speed limits'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Weather Impact Ignored', 
+                        description: 'Severe weather alert not factored into cross-country delivery estimate',
+                        data: 'Shipment: SH-2025-08621 | Route: Denver, CO → Kansas City, MO | Weather: Blizzard warning I-70 | AI ETA: 8 hours | Actual: 14 hours',
+                        cost: 1200,
+                        action: 'Implement weather API integration for route planning'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'high',
+                        title: 'Non-Existent Route', 
+                        description: 'AI referenced a road closure that was resolved 2 weeks ago',
+                        data: 'Shipment: SH-2025-08594 | Route: I-95 North (Philadelphia) | Closure ID: I95-PHL-2025-001 | Status: Reopened Jan 15',
+                        cost: 680,
+                        action: 'Update traffic data integration to real-time API'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'medium',
+                        title: 'Traffic Data Outdated', 
+                        description: 'ETA calculation used 6-month-old traffic pattern data for urban route',
+                        data: 'Shipment: SH-2025-08531 | Destination: 450 W 33rd St, New York, NY 10001 | AI ETA: 45 min | Actual: 2h 15min (rush hour)',
+                        cost: 420,
+                        action: 'Implement real-time traffic data feed for urban deliveries'
+                    },
+                    { 
+                        number: 5,
+                        urgency: 'low',
+                        title: 'Weekend Delivery Not Flagged', 
+                        description: 'AI scheduled delivery for Saturday without checking recipient hours',
+                        data: 'Shipment: SH-2025-08712 | Destination: 2200 Business Center Dr, Austin, TX | Delivery: Saturday 10:00 AM | Hours: Mon-Fri only',
+                        cost: 150,
+                        action: 'Add business hours validation for delivery scheduling'
+                    }
+                ]
+            },
+            carrier: {
+                title: 'Carrier AI Matching Evaluation',
+                totalDecisions: 892,
+                issuesFound: 31,
+                accuracy: 96.5,
+                costSaved: 22300,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'Equipment Mismatch', 
+                        description: 'Refrigerated shipment assigned to dry van carrier',
+                        data: 'Shipment: SH-2025-09301 | Product: Fresh seafood (38°F required) | Assigned: Dry Van (no reefer) | Carrier: RoadHaulers LLC',
+                        cost: 3200,
+                        action: 'Add equipment type validation to matching algorithm'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Capacity Overlooked', 
+                        description: 'Carrier at 95% capacity assigned new high-priority shipment',
+                        data: 'Shipment: SH-2025-09245 | Carrier: SwiftTransport | Capacity: 47/50 trucks (94%) | Priority: URGENT | Result: 18-hour delay',
+                        cost: 1200,
+                        action: 'Implement real-time capacity tracking integration'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'high',
+                        title: 'Expired Contract Rate', 
+                        description: 'AI used contract rate that expired 45 days ago for carrier selection',
+                        data: 'Shipment: SH-2025-09187 | Carrier: MegaLogistics | Contract: ML-2024-0892 | Expired: Dec 1, 2024 | Used Rate: $2.15/mi | Current: $2.85/mi',
+                        cost: 890,
+                        action: 'Set up automated contract expiration alerts'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'medium',
+                        title: 'Service Area Mismatch', 
+                        description: 'AI assigned shipment to carrier not servicing destination zip code',
+                        data: 'Shipment: SH-2025-09123 | Carrier: FastFreight Inc | Destination: 89109 (Las Vegas, NV) | Carrier Service Area: CA, AZ, OR only',
+                        cost: 450,
+                        action: 'Sync carrier service area database weekly'
+                    },
+                    { 
+                        number: 5,
+                        urgency: 'low',
+                        title: 'Non-Existent Lane', 
+                        description: 'AI claimed carrier operates lane they discontinued in Q3',
+                        data: 'Shipment: SH-2025-09378 | Lane: Miami, FL → Atlanta, GA | Carrier: CoastalFreight | Lane Status: Discontinued Sep 30, 2024',
+                        cost: 650,
+                        action: 'Update carrier lane database with discontinued routes'
+                    }
+                ]
+            },
+            document: {
+                title: 'Document Data Extraction Evaluation',
+                totalDecisions: 2156,
+                issuesFound: 47,
+                accuracy: 97.8,
+                costSaved: 15680,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'Hazmat Classification Wrong', 
+                        description: 'UN number incorrectly extracted leading to wrong handling requirements',
+                        data: 'Shipment: SH-2025-10412 | Product: Lithium batteries | AI UN#: UN2794 | Actual UN#: UN3480 | Violation: DOT non-compliance',
+                        cost: 2500,
+                        action: 'Implement hazmat code validation against DOT database'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Date Format Error', 
+                        description: 'European date format (DD/MM) misinterpreted as US format (MM/DD)',
+                        data: 'Shipment: SH-2025-10345 | BOL Date: 04/02/2025 (EU format) | AI Read: April 2, 2025 | Actual: February 4, 2025 | 57-day discrepancy',
+                        cost: 1800,
+                        action: 'Deploy date format detection based on origin country'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'high',
+                        title: 'BOL Weight Mismatch', 
+                        description: 'AI extracted 2,450 lbs from BOL but actual weight was 24,500 lbs - decimal error',
+                        data: 'Shipment: SH-2025-10234 | BOL: BOL-2025-45621 | AI Extracted: 2,450 lbs | Actual: 24,500 lbs | Cost Impact: $1,200 reweigh fee',
+                        cost: 850,
+                        action: 'Implement double-validation for numeric fields'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'medium',
+                        title: 'Fictional Reference Number', 
+                        description: 'AI generated PO number that does not exist in customer system',
+                        data: 'Shipment: SH-2025-10291 | Customer: Acme Corp | AI PO#: PO-ACME-78923 | System Check: NOT FOUND | Invoice delayed 5 days',
+                        cost: 420,
+                        action: 'Add reference number verification against customer database'
+                    }
+                ]
+            },
+            rate: {
+                title: 'Automated Rate Quoting Evaluation',
+                totalDecisions: 678,
+                issuesFound: 19,
+                accuracy: 97.2,
+                costSaved: 28900,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'Fake Volume Discount', 
+                        description: 'AI applied non-existent volume discount tier to quote',
+                        data: 'Quote: QT-2025-15341 | Customer: TechParts Co | AI Applied: 15% Volume Discount | Actual Tier: No discount (under 100 shipments/mo)',
+                        cost: 450,
+                        action: 'Create discount tier verification system'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Below-Cost Quote', 
+                        description: 'AI quoted $450 for lane where carrier minimum is $680',
+                        data: 'Quote: QT-2025-15234 | Lane: Dallas, TX → Houston, TX | AI Quote: $450.00 | Carrier Min: $680.00 (Contract CF-2025-001) | Loss: $230',
+                        cost: 230,
+                        action: 'Implement minimum rate validation against contract terms'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'medium',
+                        title: 'Accessorials Missing', 
+                        description: 'Liftgate required but not included in quote - customer has liftgate on all shipments',
+                        data: 'Quote: QT-2025-15402 | Destination: 1247 Industrial Pkwy, Cleveland, OH 44114 | Missing: Liftgate ($125) | Customer History: 100% liftgate',
+                        cost: 125,
+                        action: 'Add automatic accessorial detection from shipment history'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'low',
+                        title: 'Fuel Surcharge Omitted', 
+                        description: 'FSC not included in final quote despite being required',
+                        data: 'Quote: QT-2025-15289 | Base Rate: $1,250.00 | Missing FSC: 18.5% ($231.25) | Customer: GlobalManufacturing Inc',
+                        cost: 89,
+                        action: 'Auto-apply FSC based on contract terms'
+                    }
+                ]
+            },
+            customer: {
+                title: 'Customer Communication AI Evaluation',
+                totalDecisions: 1845,
+                issuesFound: 38,
+                accuracy: 97.9,
+                costSaved: 12400,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'Incorrect Delivery Status', 
+                        description: 'AI notified customer of "delivered" status but shipment still in transit',
+                        data: 'Shipment: SH-2025-11234 | Customer: RetailCorp | Email Sent: "Your order has been delivered" | Actual Status: In Transit (Chicago hub)',
+                        cost: 350,
+                        action: 'Add status verification before sending notifications'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Wrong Tracking Number', 
+                        description: 'Customer received tracking link for different shipment',
+                        data: 'Shipment: SH-2025-11287 | Customer: John Smith (john@email.com) | Sent Tracking: SH-2025-09876 (wrong shipment) | Actual: SH-2025-11287',
+                        cost: 180,
+                        action: 'Implement tracking number validation before dispatch'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'medium',
+                        title: 'Non-Existent Delay', 
+                        description: 'AI cited weather delay but no weather events on route',
+                        data: 'Shipment: SH-2025-11345 | Delay Reason: "Severe weather in Phoenix, AZ" | Weather Check: Clear skies, 72°F | Customer confusion call',
+                        cost: 0,
+                        action: 'Create delay reason validation against actual events'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'low',
+                        title: 'Tone Mismatch', 
+                        description: 'Casual tone used for critical delay notification to enterprise client',
+                        data: 'Shipment: SH-2025-11401 | Customer: Fortune500 Corp (Enterprise Tier) | AI Message: "Hey, your stuff is gonna be late" | Expected: Professional notification',
+                        cost: 0,
+                        action: 'Implement tone scoring based on customer tier'
+                    }
+                ]
+            },
+            route: {
+                title: 'Route Optimization Evaluation',
+                totalDecisions: 523,
+                issuesFound: 15,
+                accuracy: 97.1,
+                costSaved: 19800,
+                issues: [
+                    { 
+                        number: 1,
+                        urgency: 'critical',
+                        title: 'HOS Violation', 
+                        description: 'Route requires 13 hours driving in 11-hour HOS window',
+                        data: 'Shipment: SH-2025-12234 | Route: Seattle, WA → Portland, OR → San Francisco, CA | Drive Time: 13h 20min | HOS Limit: 11 hours | Violation: FMCSA',
+                        cost: 2200,
+                        action: 'Implement HOS compliance checking in optimization'
+                    },
+                    { 
+                        number: 2,
+                        urgency: 'high',
+                        title: 'Truck-Restricted Route', 
+                        description: 'AI routed through residential area with 5-ton weight limit',
+                        data: 'Shipment: SH-2025-12123 | Route: Via Maple Ave, Residential District | Truck Weight: 33,000 lbs (16.5 tons) | Limit: 5 tons | Violation: Potential fine $850',
+                        cost: 850,
+                        action: 'Integrate truck-specific routing restrictions'
+                    },
+                    { 
+                        number: 3,
+                        urgency: 'high',
+                        title: 'Closed Facility', 
+                        description: 'Route planned for delivery to facility closed on Saturdays',
+                        data: 'Shipment: SH-2025-12187 | Destination: 4500 Commerce Pkwy, Columbus, OH 43219 | Delivery: Saturday 2:00 PM | Facility Hours: Mon-Fri only',
+                        cost: 450,
+                        action: 'Add facility hours validation to route planning'
+                    },
+                    { 
+                        number: 4,
+                        urgency: 'medium',
+                        title: 'Toll Cost Ignored', 
+                        description: 'Route saved 12 miles but added $85 in tolls vs toll-free alternative',
+                        data: 'Shipment: SH-2025-12301 | Route A (AI): I-95 Express (287 mi, $85 tolls) | Route B (Alternative): I-95 Local (299 mi, $0 tolls) | Net Loss: $85 + fuel',
+                        cost: 85,
+                        action: 'Include toll cost analysis in route optimization'
+                    }
+                ]
+            }
+        };
+
+        let selectedUseCase = null;
+        let completedEvaluations = [];
+        let allIssuesForBrief = [];
+
+        const useCaseBtns = document.querySelectorAll('.use-case-btn');
+        const evaluationResults = document.getElementById('evaluationResults');
+        const evalTitle = document.getElementById('evalTitle');
+        const evalStats = document.getElementById('evalStats');
+        const evaluationDetails = document.getElementById('evaluationDetails');
+        const issuesContainer = document.getElementById('issuesContainer');
+        const actionsContainer = document.getElementById('actionsContainer');
+        const evalSummary = document.getElementById('evalSummary');
+        const morningBrief = document.getElementById('morningBrief');
+
+        // Urgency priority order
+        const urgencyOrder = { 'critical': 0, 'high': 1, 'medium': 2, 'low': 3 };
+        const urgencyLabels = { 'critical': 'CRITICAL', 'high': 'HIGH', 'medium': 'MEDIUM', 'low': 'LOW' };
+        const urgencyColors = { 'critical': '#dc2626', 'high': '#d97706', 'medium': '#2563eb', 'low': '#6b7280' };
+
+        // Use case selection - auto run evaluation
+        useCaseBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                useCaseBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedUseCase = btn.dataset.usecase;
+                
+                const data = useCaseData[selectedUseCase];
+                evalTitle.textContent = 'Overnight evaluation results for ' + data.title.split(' Evaluation')[0];
+                evaluationResults.classList.add('active');
+                
+                // Run evaluation automatically
+                runEvaluation(data);
+                
+                // Track for morning brief
+                if (!completedEvaluations.includes(selectedUseCase)) {
+                    completedEvaluations.push(selectedUseCase);
+                }
+                
+                // Generate morning brief
+                generateMorningBrief();
+            });
+        });
+
+        // Animation timers storage
+        let animationTimers = {};
+
+        // Run evaluation
+        function runEvaluation(data) {
+            // Clear any existing animations
+            Object.values(animationTimers).forEach(timer => clearInterval(timer));
+            animationTimers = {};
+            
+            // Animate stats (set accuracy directly to avoid flickering)
+            animateValue('statTotal', 0, data.totalDecisions, 800);
+            animateValue('statIssues', 0, data.issuesFound, 800);
+            document.getElementById('statAccuracy').textContent = data.accuracy + '%';
+            animateValue('statCost', 0, data.costSaved, 800, '$');
+            
+            // Sort issues by urgency (critical first)
+            const sortedIssues = [...data.issues].sort((a, b) => urgencyOrder[a.urgency] - urgencyOrder[b.urgency]);
+            
+            // Show top 4 urgent issues in 2x2 grid
+            issuesContainer.innerHTML = '';
+            const topIssues = sortedIssues.slice(0, 4);
+            topIssues.forEach(issue => {
+                const issueEl = document.createElement('div');
+                issueEl.className = 'issue-card';
+                issueEl.innerHTML = `
+                    <div class="issue-card-header">
+                        <span class="issue-card-urgency ${issue.urgency}">${urgencyLabels[issue.urgency]}</span>
+                        <span class="issue-card-title">${issue.number}. ${issue.title}</span>
+                    </div>
+                    <div class="issue-card-desc">${issue.description}</div>
+                    <div class="issue-card-data">${issue.data}</div>
+                    <div class="issue-card-action">${issue.action}</div>
+                    <div class="issue-card-cost">Potential cost impact: $${issue.cost.toLocaleString()}</div>
+                `;
+                issuesContainer.appendChild(issueEl);
+            });
+            
+            // Add "show more" link if there are more issues
+            if (sortedIssues.length > 4) {
+                const showMoreEl = document.createElement('div');
+                showMoreEl.className = 'show-more-link';
+                showMoreEl.innerHTML = `<a href="#" onclick="alert('Coming soon'); return false;">+ View ${sortedIssues.length - 4} more issues</a>`;
+                issuesContainer.appendChild(showMoreEl);
+            }
+            
+            // Show evaluation summary
+            evalSummary.innerHTML = `<strong>Evaluation Summary:</strong> Overnight monitoring evaluated ${data.totalDecisions.toLocaleString()} AI outputs and identified ${data.issuesFound} issues. By catching these errors before they reached production, potential cost savings of $${data.costSaved.toLocaleString()} were realized. Review recommended actions above to improve AI accuracy and reduce future issues.`;
+            
+            // Show details panel
+            evaluationDetails.style.display = 'block';
+        }
+
+        // Generate Morning Brief
+        function generateMorningBrief() {
+            let totalEvaluated = 0;
+            let totalIssues = 0;
+            let totalSaved = 0;
+            let totalAccuracy = 0;
+            allIssuesForBrief = [];
+            
+            completedEvaluations.forEach(key => {
+                const data = useCaseData[key];
+                totalEvaluated += data.totalDecisions;
+                totalIssues += data.issuesFound;
+                totalSaved += data.costSaved;
+                totalAccuracy += data.accuracy;
+                data.issues.forEach(issue => {
+                    allIssuesForBrief.push({
+                        ...issue,
+                        useCase: data.title.split(' Evaluation')[0]
+                    });
+                });
+            });
+            
+            // Calculate average accuracy
+            const avgAccuracy = completedEvaluations.length > 0 ? (totalAccuracy / completedEvaluations.length).toFixed(1) : 0;
+            
+            // Update stats
+            document.getElementById('briefEvaluated').textContent = totalEvaluated.toLocaleString();
+            document.getElementById('briefIssues').textContent = totalIssues.toLocaleString();
+            document.getElementById('briefAccuracy').textContent = avgAccuracy + '%';
+            document.getElementById('briefSaved').textContent = '$' + totalSaved.toLocaleString();
+            
+            // Update subtitle with use case names
+            const useCaseNames = completedEvaluations.map(key => useCaseData[key].title.split(' Evaluation')[0]).join(', ');
+            document.getElementById('briefSubtitle').textContent = 'Overnight evaluation results for ' + useCaseNames;
+            
+            // Sort all issues by urgency for top issues list
+            const sortedByUrgency = [...allIssuesForBrief].sort((a, b) => urgencyOrder[a.urgency] - urgencyOrder[b.urgency]);
+            
+            // Top issues - simple list format
+            const briefIssuesList = document.getElementById('briefIssuesList');
+            briefIssuesList.innerHTML = '';
+            sortedByUrgency.slice(0, 5).forEach(issue => {
+                const li = document.createElement('li');
+                li.textContent = `${issue.title}`;
+                briefIssuesList.appendChild(li);
+            });
+            
+            // Highest impact actions (sorted by cost)
+            const sortedByCost = [...allIssuesForBrief].sort((a, b) => b.cost - a.cost);
+            
+            const briefActionsList = document.getElementById('briefActionsList');
+            briefActionsList.innerHTML = '';
+            sortedByCost.slice(0, 5).forEach(issue => {
+                const li = document.createElement('li');
+                li.textContent = issue.action;
+                briefActionsList.appendChild(li);
+            });
+            
+            // Footer summary
+            document.getElementById('briefFooterSummary').innerHTML = `<strong>Evaluation Summary:</strong> Overnight monitoring evaluated ${totalEvaluated.toLocaleString()} AI outputs and identified ${totalIssues} issues. By catching these errors before they reached production, potential cost savings of $${totalSaved.toLocaleString()} were realized. Review recommended actions above to improve AI accuracy and reduce future issues.`;
+            
+            // Show morning brief
+            morningBrief.classList.add('active');
+        }
+
+        // Animate value
+        function animateValue(id, start, end, duration, prefix = '') {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            const minTimer = 50;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            stepTime = Math.max(stepTime, minTimer);
+            let startTime = new Date().getTime();
+            let endTime = startTime + duration;
+            
+            // Clear existing timer for this element
+            if (animationTimers[id]) {
+                clearInterval(animationTimers[id]);
+            }
+            
+            function run() {
+                let now = new Date().getTime();
+                let remaining = Math.max((endTime - now) / duration, 0);
+                let value = Math.round(end - (remaining * range));
+                if (prefix === '$') {
+                    obj.textContent = '$' + value.toLocaleString();
+                } else {
+                    obj.textContent = value + prefix;
+                }
+                if (value == end) {
+                    clearInterval(animationTimers[id]);
+                    delete animationTimers[id];
+                }
+            }
+            
+            animationTimers[id] = setInterval(run, stepTime);
+            run();
+        }
+
+    </script>
+</body>
+</html>

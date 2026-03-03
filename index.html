@@ -3003,18 +3003,13 @@
                 <div class="footer-left">
                     <h3>Let's Connect</h3>
                     <p>Interested in discussing logistics technology, AI automation, or product strategy? Reach out and let's build something great together.</p>
-                    <form class="footer-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </p>
+                    <form class="footer-form" id="contactForm" action="https://formspree.io/f/xvzbjyaw" method="POST">
                         <input type="email" name="email" id="contactEmail" placeholder="Your email address" required>
                         <textarea name="message" id="contactMessage" placeholder="Your message" required></textarea>
+                        <input type="hidden" name="_subject" value="New message from Portfolio">
                         <button type="submit" class="send-btn">Send Message</button>
+                        <div id="formStatus" style="display: none; margin-top: 20px; padding: 16px; border-radius: 4px; text-align: center;"></div>
                     </form>
-                    <div id="formSuccess" style="display: none; margin-top: 20px; padding: 16px; background: #10b981; color: white; border-radius: 4px; text-align: center;">
-                        <strong>Thank you!</strong> Your message has been sent. I'll get back to you soon.
-                    </div>
                 </div>
                 <div class="footer-right">
                     <h4>Connect</h4>
@@ -3404,29 +3399,49 @@
             }
         });
 
-        // Contact form - Netlify Forms handles submission automatically
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            const btn = e.target.querySelector('.send-btn');
+        // Contact form - Formspree AJAX submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
             const form = e.target;
-            const successMsg = document.getElementById('formSuccess');
+            const btn = form.querySelector('.send-btn');
+            const statusDiv = document.getElementById('formStatus');
             
             btn.textContent = 'Sending...';
             btn.disabled = true;
             btn.style.opacity = '0.7';
+            statusDiv.style.display = 'none';
             
-            // For Netlify, let the form submit normally
-            // The success message will show briefly before page redirect
-            setTimeout(() => {
-                form.style.display = 'none';
-                successMsg.style.display = 'block';
-            }, 500);
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.reset();
+                    statusDiv.innerHTML = '<strong>✓ Message sent successfully!</strong><br>Thank you for reaching out. I\'ll get back to you soon.';
+                    statusDiv.style.background = '#10b981';
+                    statusDiv.style.color = 'white';
+                    statusDiv.style.display = 'block';
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                statusDiv.innerHTML = '<strong>✗ Failed to send message.</strong><br>Please try again or email me directly at <a href="mailto:ssyting1@gmail.com" style="color: inherit; text-decoration: underline;">ssyting1@gmail.com</a>';
+                statusDiv.style.background = '#ef4444';
+                statusDiv.style.color = 'white';
+                statusDiv.style.display = 'block';
+            }
         });
-        
-        // Check if returning from successful submission
-        if (window.location.search.includes('success=true') || window.location.pathname.includes('success')) {
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        }
 
         // AI Evaluation Agent
         const useCaseData = {

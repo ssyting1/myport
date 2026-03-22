@@ -3,7 +3,7 @@
 > **10+ years building logistics SaaS, AI automation, and digital transformation products that move goods smarter.**
 
 🌐 **Live Portfolio:** [stingfolio.netlify.app](https://stingfolio.netlify.app)
-🔗 [LinkedIn](#) · [GitHub](https://github.com/ssyting1)
+🔗 [LinkedIn](https://www.linkedin.com/in/simon-ting-19262a64/) · [GitHub](https://github.com/ssyting1)
 
 ---
 

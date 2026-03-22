@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/26167036/README.md)
 # Senior Product Manager Portfolio
 
 > **10+ years building logistics SaaS, AI automation, and digital transformation products that move goods smarter.**
